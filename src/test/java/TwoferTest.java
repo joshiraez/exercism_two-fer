@@ -22,8 +22,16 @@ public class TwoferTest {
     }
 
     @Test
-    public void blankNameGiven() {
+    public void emptyNameGiven() {
         String input = "";
+        String expected = "One for you, one for me.";
+
+        assertEquals(expected, twofer.twofer(input));
+    }
+
+    @Test
+    public void blankNameGiven() {
+        String input = "             ";
         String expected = "One for you, one for me.";
 
         assertEquals(expected, twofer.twofer(input));
