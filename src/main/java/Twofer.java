@@ -1,10 +1,10 @@
 class Twofer {
     String twofer(String name) {
         return String.format("One for %s, one for me.",
-                getName(name));
+                getHowToCallThemFrom(name));
     }
 
-    private String getName(final String yourName) {
+    private String getHowToCallThemFrom(final String yourName) {
         return isAName(yourName)
                 ? yourName.trim()
                 : "you";
