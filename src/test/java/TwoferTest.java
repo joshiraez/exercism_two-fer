@@ -45,10 +45,17 @@ public class TwoferTest {
         assertEquals(expected, twofer.twofer(input));
     }
 
-    @Ignore("Remove to run test")
     @Test
     public void anotherNameGiven() {
         String input = "Bob";
+        String expected = "One for Bob, one for me.";
+
+        assertEquals(expected, twofer.twofer(input));
+    }
+
+    @Test
+    public void aNameWithBlankSpacesGivenIsTrimmed() {
+        String input = "  Bob     ";
         String expected = "One for Bob, one for me.";
 
         assertEquals(expected, twofer.twofer(input));
