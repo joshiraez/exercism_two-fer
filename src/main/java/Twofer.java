@@ -1,13 +1,16 @@
 class Twofer {
     String twofer(String name) {
+        return String.format("One for %s, one for me.",
+                getName(name));
+    }
 
-        String yourName;
+    private String getName(final String yourName) {
+        return isNoName(yourName)
+                ? "you"
+                : yourName.trim();
+    }
 
-        if (name == null || name.isBlank())
-            yourName = "you";
-        else
-            yourName = name.trim();
-
-        return "One for "+yourName+", one for me.";
+    private boolean isNoName(final String yourName) {
+        return yourName == null || yourName.isBlank();
     }
 }
