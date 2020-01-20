@@ -60,4 +60,12 @@ public class TwoferTest {
 
         assertEquals(expected, twofer.twofer(input));
     }
+
+    @Test
+    public void aNameWithLastNameIsCalledCorrectly() {
+        String input = "Bob Flanders";
+        String expected = "One for Bob Flanders, one for me.";
+
+        assertEquals(expected, twofer.twofer(input));
+    }
 }
