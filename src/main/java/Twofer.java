@@ -1,9 +1,11 @@
 class Twofer {
     String twofer(String name) {
 
-        if (name == null || name.isBlank())
-            return "One for you, one for me.";
+        String yourName = name;
 
-        return null;
+        if (name == null || name.isBlank())
+            yourName = "you";
+
+        return "One for "+yourName+", one for me.";
     }
 }
