@@ -5,12 +5,12 @@ class Twofer {
     }
 
     private String getName(final String yourName) {
-        return isNoName(yourName)
-                ? "you"
-                : yourName.trim();
+        return isAName(yourName)
+                ? yourName.trim()
+                : "you";
     }
 
-    private boolean isNoName(final String yourName) {
-        return yourName == null || yourName.isBlank();
+    private boolean isAName(final String yourName) {
+        return yourName != null && !yourName.isBlank();
     }
 }
